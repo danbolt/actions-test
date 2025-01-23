@@ -1,6 +1,8 @@
 class_name TestTemplate extends Node
 
-@onready var main: Main = $Main
+@onready var main_prefab: PackedScene = preload("res://main.tscn")
+
+var main: Main = null
 
 func _test_coroutine() -> void:
 	assert(false, "_test_coroutine was not overridden")
@@ -25,5 +27,9 @@ func test_failed(reason: String) -> void:
 	get_tree().quit(1)
 
 func _ready() -> void:
+	var new_main: Main = main_prefab.instantiate()
+	add_child(new_main)
+	main = new_main
+	
 	_test_coroutine.call_deferred()
 	_add_test_label()
