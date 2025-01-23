@@ -19,6 +19,8 @@ func _test_coroutine() -> void:
 	
 	# Wait two frames
 	await get_tree().physics_frame
+	
+	Input.action_release("ui_accept")
 	await get_tree().physics_frame
 	
 	if main.get_player().velocity.y >= 0.0:
