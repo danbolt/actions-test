@@ -1,15 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://c6pssyjmn858f"]
+[gd_scene load_steps=3 format=3 uid="uid://c6pssyjmn858f"]
 
 [ext_resource type="Script" uid="uid://bjcf3pk56jmih" path="res://scripts/coin.gd" id="1_t4pel"]
-[ext_resource type="Material" uid="uid://dym2jyc2ypbjw" path="res://materials/unshaded_gold.tres" id="2_wkpqx"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_h2yge"]
-
-[sub_resource type="SphereMesh" id="SphereMesh_1bvp3"]
-material = ExtResource("2_wkpqx")
-flip_faces = true
-radius = 10.0
-height = 20.0
 
 [node name="Coin" type="Area2D"]
 collision_layer = 4
@@ -19,5 +12,6 @@ script = ExtResource("1_t4pel")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_h2yge")
 
-[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
-mesh = SubResource("SphereMesh_1bvp3")
+[node name="Polygon2D" type="Polygon2D" parent="."]
+color = Color(0.576471, 0.470588, 0.113725, 1)
+polygon = PackedVector2Array(0, -10, 5, -9, 8, -6, 10, -3, 10, 0, 9, 4, 6, 8, 3, 9, 0, 10, -4, 9, -8, 6, -10, 3, -10, 0, -9, -5, -6, -8)
