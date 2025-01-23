@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://c6pssyjmn858f"]
+
+[ext_resource type="Script" uid="uid://bjcf3pk56jmih" path="res://scripts/coin.gd" id="1_t4pel"]
+[ext_resource type="Material" uid="uid://dym2jyc2ypbjw" path="res://materials/unshaded_gold.tres" id="2_wkpqx"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_h2yge"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_1bvp3"]
+material = ExtResource("2_wkpqx")
+flip_faces = true
+radius = 10.0
+height = 20.0
+
+[node name="Coin" type="Area2D"]
+collision_layer = 4
+collision_mask = 2
+script = ExtResource("1_t4pel")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_h2yge")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+mesh = SubResource("SphereMesh_1bvp3")

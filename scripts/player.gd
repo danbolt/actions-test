@@ -1,9 +1,12 @@
 class_name Player extends CharacterBody2D
 
+signal collected_coin()
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 
+func collect_coin() -> void:
+	collected_coin.emit()
 
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
