@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dlk75s6x5dwb2"]
+
+[ext_resource type="Script" uid="uid://dxqjy7byojp0c" path="res://tests/player_jumps.gd" id="1_d0rc6"]
+[ext_resource type="PackedScene" uid="uid://j3ufmuetbc7" path="res://main.tscn" id="2_2c2wg"]
+
+[node name="PlayerJumps" type="Node"]
+script = ExtResource("1_d0rc6")
+metadata/_custom_type_script = ExtResource("1_d0rc6")
+
+[node name="Main" parent="." instance=ExtResource("2_2c2wg")]
