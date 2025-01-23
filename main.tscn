@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://j3ufmuetbc7"]
+[gd_scene load_steps=6 format=3 uid="uid://j3ufmuetbc7"]
 
 [ext_resource type="Material" uid="uid://b1knoc3u2vdqt" path="res://materials/unshaded_blank.tres" id="1_0xm2m"]
+[ext_resource type="Script" uid="uid://drcnf78mxnij6" path="res://scripts/main.gd" id="1_h2yge"]
 [ext_resource type="PackedScene" uid="uid://b6pb2na2re12w" path="res://gameobjects/player.tscn" id="2_h2yge"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7dm0k"]
@@ -11,6 +12,7 @@ material = ExtResource("1_0xm2m")
 size = Vector3(250, 100, 1)
 
 [node name="Main" type="Node"]
+script = ExtResource("1_h2yge")
 
 [node name="Gameplay" type="Node2D" parent="."]
 
