@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://bfyc4jbq2ruvq"]
+
+[ext_resource type="Script" uid="uid://rm3103sr706x" path="res://tests/stochastic_inputs.gd" id="1_031qv"]
+
+[node name="StochasticInputs" type="Node"]
+script = ExtResource("1_031qv")
+metadata/_custom_type_script = ExtResource("1_031qv")

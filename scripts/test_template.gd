@@ -27,6 +27,7 @@ func test_failed(reason: String) -> void:
 	get_tree().quit(1)
 
 func _ready() -> void:
+	self.process_mode = Node.PROCESS_MODE_ALWAYS
 	var new_main: Main = main_prefab.instantiate()
 	add_child(new_main)
 	main = new_main
