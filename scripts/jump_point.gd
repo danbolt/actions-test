@@ -1,0 +1,1 @@
+class_name JumpPoint extends NavigationLink2D

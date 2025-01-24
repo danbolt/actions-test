@@ -3,6 +3,19 @@ class_name Main extends Node
 var coin_count: int = 0
 @onready var coin_count_label: Label = $Gameplay/CoinCountLabel
 
+func get_coins() -> Array[Coin]:
+	var result: Array[Coin] = []
+	result.assign($Gameplay/Coins.get_children())
+	return result
+	
+func get_coin_count() -> int:
+	return $Gameplay/Coins.get_child_count()
+	
+func get_next_coin_or_null() -> Coin:
+	if get_coin_count() <= 0:
+		return null
+	return $Gameplay/Coins.get_child(0)
+
 func update_coin_text() -> void:
 	coin_count_label.text = "Coins: %s" % [coin_count]
 

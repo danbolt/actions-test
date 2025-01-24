@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://doc0ymuwjmlia"]
+
+[ext_resource type="Script" uid="uid://didibxtxcljhr" path="res://tests/can_collect_coins.gd" id="1_sa3py"]
+
+[node name="CanCollectCoins" type="Node"]
+script = ExtResource("1_sa3py")
+metadata/_custom_type_script = ExtResource("1_sa3py")

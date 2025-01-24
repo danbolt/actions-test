@@ -24,5 +24,10 @@ window/stretch/mode="viewport"
 [layer_names]
 
 2d_physics/layer_1="Physical World"
+2d_navigation/layer_1="PlayerMotion"
 2d_physics/layer_2="Player"
 2d_physics/layer_3="Coin"
+
+[navigation]
+
+2d/default_link_connection_radius=8.0
