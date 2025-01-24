@@ -15,12 +15,12 @@ func _test_coroutine() -> void:
 			return
 	
 	# Make the player jump
-	Input.action_press("ui_accept")
+	Input.action_press("jump")
 	
 	# Wait two frames
 	await get_tree().physics_frame
 	
-	Input.action_release("ui_accept")
+	Input.action_release("jump")
 	await get_tree().physics_frame
 	
 	if main.get_player().velocity.y >= 0.0:

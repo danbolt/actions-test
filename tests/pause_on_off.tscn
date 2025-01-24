@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://b66adrnnvj7yu"]
+
+[ext_resource type="Script" uid="uid://jbbyabqosi7d" path="res://tests/pause_on_off.gd" id="1_e1v7q"]
+
+[node name="PauseOnOff" type="Node"]
+script = ExtResource("1_e1v7q")
+metadata/_custom_type_script = ExtResource("1_e1v7q")

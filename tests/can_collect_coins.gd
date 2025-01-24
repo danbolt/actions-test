@@ -43,12 +43,12 @@ func _test_coroutine() -> void:
 			
 		if has_link and not has_leaped and player.is_on_floor():
 			has_leaped = true  
-			Input.action_press("ui_accept")
+			Input.action_press("jump")
 			
 			await get_tree().physics_frame
 			await get_tree().physics_frame
 			
-			Input.action_release("ui_accept")
+			Input.action_release("jump")
 			
 			next_path_position = link_end
 			
@@ -69,10 +69,10 @@ func _test_coroutine() -> void:
 			if Input.is_action_pressed("ui_right"):
 				Input.action_release("ui_right")
 				
-		if (not Input.is_action_pressed("ui_accept")) and next_path_position.y < player.position.y and player.is_on_floor():
-			Input.action_press("ui_accept")
-		elif Input.is_action_pressed("ui_accept"):
-			Input.action_release("ui_accept")
+		if (not Input.is_action_pressed("jump")) and next_path_position.y < player.position.y and player.is_on_floor():
+			Input.action_press("jump")
+		elif Input.is_action_pressed("jump"):
+			Input.action_release("jump")
 		
 		await get_tree().physics_frame
 		

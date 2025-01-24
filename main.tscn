@@ -1,9 +1,11 @@
-[gd_scene load_steps=6 format=4 uid="uid://j3ufmuetbc7"]
+[gd_scene load_steps=8 format=4 uid="uid://j3ufmuetbc7"]
 
 [ext_resource type="Script" uid="uid://drcnf78mxnij6" path="res://scripts/main.gd" id="1_h2yge"]
 [ext_resource type="PackedScene" uid="uid://b6pb2na2re12w" path="res://gameobjects/player.tscn" id="2_h2yge"]
+[ext_resource type="Script" uid="uid://btec4ptshxlyu" path="res://scripts/gameplay.gd" id="2_lquwl"]
 [ext_resource type="TileSet" uid="uid://5w777qxtcr3q" path="res://tilesets/tiles.tres" id="4_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://c6pssyjmn858f" path="res://gameobjects/coin.tscn" id="4_lquwl"]
+[ext_resource type="Script" uid="uid://d4mbjj6kqaotl" path="res://scripts/pause_label.gd" id="6_7mycd"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_1bvp3"]
 vertices = PackedVector2Array(602, 282, 630, 374, 470, 374, 474, 362, 518, 282, 630, 10, 602, 230, 518, 230, 442, 202, 442, 150, 138, 138, 138, 86, 166, 118, 166, 170, 282, 170, 282, 118, 326, 150, 326, 202, 474, 310, 390, 362, 330, 422, 10, 10, 470, 422, 330, 358, 390, 310, 214, 358, 214, 390, 102, 390, 22, 138, 102, 438, 10, 438, 22, 86)
@@ -11,9 +13,23 @@ polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4), PackedInt32
 outlines = Array[PackedVector2Array]([PackedVector2Array(-10, -7, -7, 491, 647, 490, 649, -9)])
 
 [node name="Main" type="Node"]
+process_mode = 3
 script = ExtResource("1_h2yge")
 
 [node name="Gameplay" type="Node2D" parent="."]
+process_mode = 1
+script = ExtResource("2_lquwl")
+
+[node name="PauseLabel" type="Label" parent="Gameplay"]
+process_mode = 3
+offset_right = 640.0
+offset_bottom = 480.0
+theme_override_font_sizes/font_size = 64
+text = "Paused"
+horizontal_alignment = 1
+vertical_alignment = 1
+visible_ratio = -0.166667
+script = ExtResource("6_7mycd")
 
 [node name="Player" parent="Gameplay" instance=ExtResource("2_h2yge")]
 position = Vector2(37, 374)

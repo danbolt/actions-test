@@ -33,3 +33,6 @@ func _ready() -> void:
 	
 func _process(_delta: float) -> void:
 	assert(coin_count >= 0, "We have a negative coin count of %s" % [ coin_count ])
+	
+	if Input.is_action_just_pressed("pause"):
+		get_tree().paused = !get_tree().paused
