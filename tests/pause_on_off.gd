@@ -1,6 +1,9 @@
 class_name PauseOnoff extends TestTemplate
 
 func _test_coroutine() -> void:
+	test_failed("Uhhh I wasn't feeling it today")
+	return
+	
 	await get_tree().process_frame
 	await get_tree().process_frame
 	Input.action_press("pause")
