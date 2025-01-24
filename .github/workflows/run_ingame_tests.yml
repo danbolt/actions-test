@@ -11,3 +11,7 @@ jobs:
       - run: ./Godot_v4.4-beta1_linux.x86_64 -v --headless -e --quit
       - run: ./Godot_v4.4-beta1_linux.x86_64 -v --headless -e --quit # <-- double to ensure that we have everything in place from imports
       - run: ./Godot_v4.4-beta1_linux.x86_64 ./tests/game_starts.tscn --headless
+      - run: ./Godot_v4.4-beta1_linux.x86_64 ./tests/player_jumps.tscn --headless
+      - run: ./Godot_v4.4-beta1_linux.x86_64 ./tests/can_collect_coins.tscn --headless
+      - run: ./Godot_v4.4-beta1_linux.x86_64 ./tests/pause_on_off.tscn --headless
+      - run: ./Godot_v4.4-beta1_linux.x86_64 ./tests/stochastic_inputs.tscn --headless
