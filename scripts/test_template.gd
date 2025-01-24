@@ -2,6 +2,8 @@ class_name TestTemplate extends Node
 
 @onready var main_prefab: PackedScene = preload("res://main.tscn")
 
+@onready var inputs_display_prefab: PackedScene = preload("res://gameobjects/inputs_display.tscn")
+
 var main: Main = null
 
 func _test_coroutine() -> void:
@@ -31,6 +33,9 @@ func _ready() -> void:
 	var new_main: Main = main_prefab.instantiate()
 	add_child(new_main)
 	main = new_main
+	
+	var inputs_display = inputs_display_prefab.instantiate()
+	add_child(inputs_display)
 	
 	_test_coroutine.call_deferred()
 	_add_test_label()

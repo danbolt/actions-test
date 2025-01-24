@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://cyhy8circ1g0t"]
+
+[ext_resource type="Script" uid="uid://bkv54oovdryui" path="res://scripts/inputs_display.gd" id="1_3iw6y"]
+
+[node name="InputsDisplay" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3iw6y")
+
+[node name="Text" type="Label" parent="."]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 102.0
+offset_right = 169.0
+offset_bottom = 219.0
