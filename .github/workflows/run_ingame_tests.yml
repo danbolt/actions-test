@@ -2,14 +2,13 @@ name: Run Ingame Tests
 run-name: Deploy to ${{ inputs.deploy_target }} by @${{ github.actor }}
 on: [push]
 jobs:
-  Grab-Godot-Beta:
+  Run-Ingame-Tests:
     runs-on: ubuntu-latest
     steps:
+      - name: Download Godot Engine
       - run: echo "Grabbing Godot..."
       - run: wget -q -O godot.zip https://github.com/godotengine/godot-builds/releases/download/4.4-beta1/Godot_v4.4-beta1_linux.x86_64.zip
       - run: unzip godot.zip
-  Run-Ingame-Tests:
-    runs-on: ubuntu-latest
-    needs: Grab-Godot-Beta
-    steps:
       - run: echo "Hello, world"
+      - name: Run Smoke Tests
+      - run: ./Godot_v4.4-beta1_linux.x86_64 ./tests/game_starts.tscn --headless
